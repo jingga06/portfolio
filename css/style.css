@@ -966,15 +966,244 @@ section { padding: 6rem 0; }
   .contact-links { flex-direction: column; align-items: center; }
 }
 
-.photo-container video {
+/* .photo-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.photo-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* kalo nanti diganti ke photo profile beneran jadi gini
-.photo-container img {
-  width: 100%;
+.project-contribution {
+  margin-top: 12px;
+  margin-bottom: 14px;
+  color: #6f4d59;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  background: rgba(255, 255, 255, 0.56);
+  border-left: 3px solid var(--rose);
+  padding: 0.65rem 0.85rem;
+  border-radius: 0 12px 12px 0;
+}
+
+.project-contribution strong {
+  color: #c75f7d;
+  font-weight: 600;
+}
+
+.project-contribution strong {
+  color: #c75f7d;
+  font-weight: 600;
+}
+
+/* =============================================
+   POLISH — HERO BUTTONS & ABOUT CARDS
+   ============================================= */
+
+/* Hero buttons: karena HTML pakai .btn.primary dan .btn.secondary */
+.hero-cta .btn {
+  min-width: 150px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid transparent;
+}
+
+.hero-cta .btn.primary {
+  background: linear-gradient(135deg, var(--rose-deep), var(--rose-dark));
+  color: var(--white);
+  box-shadow: 0 14px 34px rgba(196, 99, 122, 0.28);
+}
+
+.hero-cta .btn.primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(196, 99, 122, 0.36);
+}
+
+.hero-cta .btn.secondary {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--rose-dark);
+  border-color: rgba(196, 99, 122, 0.28);
+  box-shadow: 0 10px 28px rgba(122, 45, 66, 0.08);
+}
+
+.hero-cta .btn.secondary:hover {
+  background: var(--white);
+  color: var(--rose-deep);
+  transform: translateY(-4px);
+  border-color: var(--rose);
+  box-shadow: 0 16px 36px rgba(122, 45, 66, 0.14);
+}
+
+/* Shine effect biar button lebih hidup */
+.hero-cta .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
   height: 100%;
-  object-fit: cover;
-} */
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  transition: left 0.55s ease;
+}
+
+.hero-cta .btn:hover::before {
+  left: 120%;
+}
+
+/* About cards lebih premium */
+.about-cards {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.info-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(253, 240, 243, 0.95), rgba(255, 255, 255, 0.86));
+  border: 1px solid rgba(196, 99, 122, 0.18);
+  border-radius: 28px;
+  padding: 1.45rem 1.65rem;
+  box-shadow: 0 12px 34px rgba(122, 45, 66, 0.06);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.info-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--rose), var(--rose-deep));
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+
+.info-card::after {
+  content: "";
+  position: absolute;
+  right: -45px;
+  top: -45px;
+  width: 110px;
+  height: 110px;
+  background: radial-gradient(circle, rgba(232, 160, 180, 0.35), transparent 68%);
+  border-radius: 50%;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(196, 99, 122, 0.32);
+  box-shadow: 0 18px 42px rgba(122, 45, 66, 0.12);
+}
+
+.info-card:hover::before {
+  opacity: 1;
+}
+
+/* Ini class yang kamu pakai di HTML */
+.info-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--rose-deep);
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+
+.info-card strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* Education / GPA biar lebih stand out */
+.info-card:nth-child(2) strong {
+  color: var(--rose-dark);
+}
+
+/* Focus pills hover */
+.pill {
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  background: var(--white);
+  box-shadow: 0 8px 20px rgba(196, 99, 122, 0.12);
+}
+
+/* Project contribution biar lebih rapi */
+.project-contribution {
+  background: rgba(255, 255, 255, 0.56);
+  border-left: 3px solid var(--rose);
+  padding: 0.8rem 1rem;
+  border-radius: 0 14px 14px 0;
+}
+
+/* Contact + CV buttons hover consistency */
+.contact-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+  .hero-cta .btn {
+    width: 100%;
+  }
+
+  .info-card {
+    padding: 1.25rem 1.35rem;
+  }
+}
+
+#creative-work,
+#experience {
+  padding-top: 2.8rem;
+  padding-bottom: 3.5rem;
+}
+
+#creative-work .section-header,
+#experience .section-header {
+  margin-bottom: 1.7rem;
+}
+
+#projects {
+  padding-bottom: 3.5rem;
+}
+
+#creative-work,
+#experience {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+#creative-work .section-header,
+#experience .section-header {
+  margin-bottom: 2rem;
+}
+
+#creative-work .projects-grid,
+#experience .projects-grid {
+  margin-top: 0;
+}
