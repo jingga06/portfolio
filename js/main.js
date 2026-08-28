@@ -221,3 +221,48 @@ function setActiveNavLink() {
 
 window.addEventListener("scroll", setActiveNavLink);
 window.addEventListener("load", setActiveNavLink);
+
+const projectsGrid = document.getElementById('projectsGrid');
+const showMoreBtn = document.getElementById('showMoreProjectsBtn');
+
+if (projectsGrid && showMoreBtn) {
+  showMoreBtn.addEventListener('click', () => {
+    const isShown = projectsGrid.classList.toggle('show-all-projects');
+    showMoreBtn.textContent = isShown ? 'Show Less ↑' : 'Show More Projects ↓';
+  });
+}
+
+const certsCarousel = document.getElementById('certsCarousel');
+const certPrev = document.getElementById('certPrev');
+const certNext = document.getElementById('certNext');
+
+if (certsCarousel && certPrev && certNext) {
+  const getCardStep = () => {
+    const firstCard = certsCarousel.querySelector('.project-card');
+    if (!firstCard) return 300;
+    const style = getComputedStyle(certsCarousel);
+    const gap = parseFloat(style.columnGap || style.gap || 24);
+    return firstCard.offsetWidth + gap;
+  };
+
+  certNext.addEventListener('click', () => {
+    const step = getCardStep();
+    const maxScroll = certsCarousel.scrollWidth - certsCarousel.clientWidth;
+
+    if (certsCarousel.scrollLeft >= maxScroll - 5) {
+      certsCarousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      certsCarousel.scrollBy({ left: step, behavior: 'smooth' });
+    }
+  });
+
+  certPrev.addEventListener('click', () => {
+    const step = getCardStep();
+
+    if (certsCarousel.scrollLeft <= 5) {
+      certsCarousel.scrollTo({ left: certsCarousel.scrollWidth, behavior: 'smooth' });
+    } else {
+      certsCarousel.scrollBy({ left: -step, behavior: 'smooth' });
+    }
+  });
+}

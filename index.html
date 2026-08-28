@@ -30,6 +30,7 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#creative-work">Creative Work</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -115,7 +116,7 @@
             <span class="info-label">Education</span>
             <p>
               Information Systems · Data Science<br>
-              <strong>GPA: 3.81 / 4.00</strong>
+              <strong>GPA: 3.83 / 4.00</strong>
             </p>
           </div>
 
@@ -275,8 +276,7 @@
         </div>
 
         <div class="featured-info">
-          <div class="project-badge">ERP · Accounting IS · Team Project</div>
-          <h3 class="project-title">Logistics ERP System</h3>
+          <div class="card-badge">ERP · Accounting IS · Team Project · 🏆 2nd Place, CompSciGala 2026</div>          <h3 class="project-title">Logistics ERP System</h3>
 
           <p class="project-desc">
             Collaborative ERP and Accounting Information System for logistics operations. Includes shipment tracking, invoice management, payment processing, expense recording, AR Aging, cash flow monitoring, and automated financial reporting dashboards.
@@ -306,9 +306,76 @@
       </div>
 
       <!-- Project Grid -->
-      <div class="projects-grid">
+      <div class="projects-grid" id="projectsGrid">
 
         <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/sentinelpm-dashboard.png" alt="SentinelPM Predictive Maintenance Dashboard" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Team Project · Data Science · PT Astra Otoparts Tbk</div>
+            <h3 class="card-title">SentinelPM - Predictive Maintenance for Induction Motors</h3>
+            <p class="card-desc">
+              A working predictive maintenance prototype for Case 2 of the AOP Winteq Bootcamp at PT Astra Otoparts Tbk. Detects early bearing degradation from vibration signals using Isolation Forest anomaly detection, a PCA-based Health Index, and an exponential Remaining Useful Life estimator, validated on an honest train/holdout split.
+            </p>
+            <p class="project-contribution">
+              <strong>Contribution:</strong> Built the full analytics pipeline, feature extraction, anomaly detection, health index, RUL estimation, and the bilingual Streamlit dashboard.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Isolation Forest</span>
+              <span class="tech-tag">Signal Processing</span>
+            </div>
+            <a href="https://github.com/jingga06/Astra_Otoparts_Predictive_Maintenance_Induction_Motor" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/customer-churn-mlops.png" alt="Customer Churn MLOps Pipeline" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Solo Project · Dagster · MLOps</div>
+            <h3 class="card-title">Customer Churn MLOps Pipeline</h3>
+            <p class="card-desc">
+              Containerized Dagster pipeline predicting telecom customer churn with a logistic regression model trained on 7,043 real customer records. Runs a full MLOps pattern end to end: data ingestion, feature engineering, model training, an automated quality gate, and prediction write-back to a warehouse.
+            </p>
+            <p class="project-contribution">
+              <strong>Contribution:</strong> Built the churn prediction pipeline as independent Dagster assets, including an automated quality check that fails the pipeline if model accuracy drops below 75%.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Dagster</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">MLOps</span>
+            </div>
+            <a href="https://github.com/jingga06/Customer-Churn-MLOps-Pipeline" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-extra">
+          <div class="card-img">
+            <img src="assets/images/hr-attrition-dashboard.png" alt="Employee Attrition Analysis Dashboard" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Solo Project · Power BI · Data Visualization</div>
+            <h3 class="card-title">Employee Attrition Analysis Dashboard</h3>
+            <p class="card-desc">
+              Interactive Power BI dashboard analyzing employee attrition using the IBM HR Analytics dataset. Combined attrition counts by department and overtime status with a custom DAX Attrition Rate measure to reveal proportional risk, not just raw headcount.
+            </p>
+            <p class="project-contribution">
+              <strong>Contribution:</strong> Designed and built the entire dashboard independently, including data modeling, DAX measure creation, and interactive filtering.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Power BI</span>
+              <span class="tech-tag">DAX</span>
+              <span class="tech-tag">Data Visualization</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal project-extra">
           <div class="card-img">
             <img src="assets/images/pinkbite.jpeg" alt="PinkBite Restaurant" class="project-image">
           </div>
@@ -367,7 +434,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="card-img">
             <img src="assets/images/univents.png" alt="Univents" class="project-image">
           </div>
@@ -397,7 +464,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="card-img">
             <img src="assets/images/kopinusantara.png" alt="Kopi Nusantara" class="project-image">
           </div>
@@ -428,7 +495,7 @@
           </div>
         </div>
 
-        <div class="project-card reveal">
+        <div class="project-card reveal project-extra">
           <div class="card-img">
             <img src="assets/images/lms-customer.png" alt="Library Management System (LMS)" class="project-image">
           </div>
@@ -483,6 +550,10 @@
               View Dashboard →
             </a>
           </div>
+        </div>
+
+        <div class="show-more-wrap">
+          <button class="btn btn-outline" id="showMoreProjectsBtn">Show More Projects ↓</button>
         </div>
 
       </div>
@@ -599,6 +670,120 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section id="certifications" class="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Recognition</div>
+        <h2 class="section-title">Certifications & <em>Awards</em></h2>
+      </div>
+
+      <div class="certs-carousel-wrap">
+        <button class="carousel-arrow carousel-prev" id="certPrev" aria-label="Previous certificate">‹</button>
+
+        <div class="certs-carousel" id="certsCarousel">        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/certs/best-project-lms.png" alt="Best Project Award - Library Management System" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Award · CompSciGala 2025</div>
+            <h3 class="card-title">Best Project Award - Library Management System</h3>
+            <p class="card-desc">
+              Recognized as the Best Project of Information Systems, Batch 2024, by the academic panel at CompSciGala 2025.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Academic Recognition</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/certs/2nd-place-logistics-erp.png" alt="2nd Place - Most Favorite Project" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Award · CompSciGala 2026</div>
+            <h3 class="card-title">2nd Place - Most Favorite Project</h3>
+            <p class="card-desc">
+              Awarded 2nd Place, Most Favorite Project for SAP Express Logistics (Logistics ERP System) at CompSciGala 2026, in recognition of performance, creativity, and dedication.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Academic Recognition</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/certs/kaggle-pandas.png" alt="Certificate of Completion - Pandas" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Course Certificate · Kaggle</div>
+            <h3 class="card-title">Certificate of Completion - Pandas</h3>
+            <p class="card-desc">
+              Completed Kaggle Learn's Pandas course, covering data manipulation, cleaning, and analysis with the pandas library.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">Data Manipulation</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/certs/compscigala-sponsorship.png" alt="Sponsorship Team Member" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Certificate of Participation · CompSciGala 2025</div>
+            <h3 class="card-title">Sponsorship Team Member</h3>
+            <p class="card-desc">
+              Recognized for significant contribution as a member of the Sponsorship Team at CompSciGala 2025.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Event Committee</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/certs/compsphere-decoration.png" alt="Decoration Division Member" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Certificate of Appreciation · Compsphere 2025</div>
+            <h3 class="card-title">Decoration Division Member</h3>
+            <p class="card-desc">
+              Recognized for serving as a Decoration Division member at Compsphere 2025.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Event Committee</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="card-img">
+            <img src="assets/images/certs/ecoblox-adventure.png" alt="Marketing, Documentation & Design PIC" class="project-image">
+          </div>
+          <div class="card-body">
+            <div class="card-badge">Certificate of Appreciation · Ecoblox Adventure 2025</div>
+            <h3 class="card-title">Marketing, Documentation & Design PIC</h3>
+            <p class="card-desc">
+              Recognized for valuable contribution as PIC of Marketing, Documentation, and Design in the Ecoblox Adventure event, held 18 July 2025.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Marketing</span>
+              <span class="tech-tag">Documentation</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-arrow carousel-next" id="certNext" aria-label="Next certificate">›</button>
       </div>
     </div>
   </section>
